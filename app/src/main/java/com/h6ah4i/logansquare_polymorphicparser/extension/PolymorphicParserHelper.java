@@ -71,7 +71,7 @@ public class PolymorphicParserHelper {
                     String obj = jsonParser.getText();
                     parsedJson.add(obj);
 
-                    if (subClassTypeIdFieldName.equals(jsonParser.getCurrentName())) {
+                    if (level == 1 && subClassTypeId == null && subClassTypeIdFieldName.equals(jsonParser.getCurrentName())) {
                         subClassTypeId = obj;
                     }
                     break;
